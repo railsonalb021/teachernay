@@ -4,16 +4,16 @@ import { Icon } from '@iconify/vue'
 
 <template>
   <div class="lg:pl-40"> 
-    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 pt-10 bg-white p-8">
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 lg:pt-10 pt-32 bg-white p-8">
       <img 
         src="/imageprincipal.jpg" 
         alt="Logo" 
-        class="w-full max-w-md h-[300px] lg:w-[600px] lg:h-[520px] border-2 border-[#FF5858] rounded-2xl object-cover"
+        class="w-full max-w-3xl h-[300px] lg:w-[600px] lg:h-[520px] border-2 border-[#FF5858] rounded-2xl object-cover"
       />
       <img 
         src="/imageprincipal2.jpg" 
         alt="Logo" 
-        class="w-full max-w-md h-[300px] lg:w-[600px] lg:h-[520px] border-2 border-[#FF5858] rounded-2xl object-cover mt-6 lg:mt-0"
+        class="w-full max-w-3xl h-[300px] lg:w-[600px] lg:h-[520px] border-2 border-[#FF5858] rounded-2xl object-cover mt-6 lg:mt-0"
       />
     </div>
 
