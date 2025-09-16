@@ -6,8 +6,8 @@ const menuOpen = ref(false)
 
 const menusFiltrados = [
   { label: "Início", link: "#inicio", icon: "heroicons:home" },
-  { label: "Contato", link: "#contato", icon: "heroicons:phone" },
-  { label: "Portal do Aluno", link: "/contato", icon: "heroicons:academic-cap" },
+  { label: "Contato", link: "https://docs.google.com/forms/d/1MQrzkvxRuAcA2TR_3NyuO2fzP02nP2YsBUc1_J8o2XE/viewform?chromeless=1&edit_requested=true", icon: "heroicons:phone" },
+  { label: "Portal do Aluno", link: "https://www.iorclass.com.br/login_aluno", icon: "heroicons:academic-cap" },
 ]
 </script>
 
