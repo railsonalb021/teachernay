@@ -18,7 +18,7 @@ import { Icon } from '@iconify/vue'
     </div>
 
     <section id="inicio">
-      <div class="flex flex-col lg:flex-row justify-center items-center pt-20 gap-10 lg:gap-20 text-center lg:text-left">
+      <div class="flex flex-col lg:flex-row justify-center items-center lg:pt-40 pt-20 gap-10 lg:gap-20 text-center lg:text-left">
         <div>
           <h1 class="text-[#FF5858] text-3xl font-bold">APRENDA INGLÊS </h1>
           <h1 class="text-[#FF5858] text-3xl font-bold">DE FORMA</h1>
