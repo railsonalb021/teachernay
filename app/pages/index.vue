@@ -6,7 +6,7 @@ const email = ref("")
 const mensagem = ref("")
 
 const enviarWhatsApp = () => {
-  const telefone = "5521999406429" // número do WhatsApp (com DDI +55 e DDD)
+  const telefone = "5521975602163" // número do WhatsApp (com DDI +55 e DDD)
   const texto = `Olá, meu nome é ${nome.value}%0AEmail: ${email.value}%0AMensagem: ${mensagem.value}`
   const url = `https://wa.me/${telefone}?text=${texto}`
 
