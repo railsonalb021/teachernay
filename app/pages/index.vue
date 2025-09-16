@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+
+const nome = ref("")
+const email = ref("")
+const mensagem = ref("")
+
+const enviarWhatsApp = () => {
+  const telefone = "5521999406429" // número do WhatsApp (com DDI +55 e DDD)
+  const texto = `Olá, meu nome é ${nome.value}%0AEmail: ${email.value}%0AMensagem: ${mensagem.value}`
+  const url = `https://wa.me/${telefone}?text=${texto}`
+
+  window.open(url, "_blank")
+}
 </script>
 
 <template>
@@ -85,17 +97,40 @@ import { Icon } from '@iconify/vue'
     </section>
 
     <section id="contato">
-      <div class="flex flex-col items-center pt-20 space-y-10 mb-20 px-4">
-        <h1 class="text-[#FF5858] text-3xl font-bold underline underline-offset-8">ENTRE EM CONTATO</h1>
-        <form class="flex flex-col space-y-4 w-full max-w-md">
-          <input type="text" placeholder="Nome" class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5858]" />
-          <input type="email" placeholder="Email" class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5858]" />
-          <textarea placeholder="Mensagem" class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#FF5858]"></textarea>
-          <button type="submit" class="bg-[#FF5858] text-white px-10 py-3 rounded-lg mt-5 hover:bg-red-500 ease-out transition-all duration-300 hover:scale-105">
-            Enviar
-          </button>
-        </form>
-      </div>
-    </section>
+    <div class="flex flex-col items-center pt-20 space-y-10 mb-20 px-4">
+      <h1 class="text-[#FF5858] text-3xl font-bold underline underline-offset-8">
+        ENTRE EM CONTATO
+      </h1>
+
+      <form
+        class="flex flex-col space-y-4 w-full max-w-md"
+        @submit.prevent="enviarWhatsApp"
+      >
+        <input
+          type="text"
+          v-model="nome"
+          placeholder="Nome"
+          class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5858]"
+        />
+        <input
+          type="email"
+          v-model="email"
+          placeholder="Email"
+          class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF5858]"
+        />
+        <textarea
+          v-model="mensagem"
+          placeholder="Mensagem"
+          class="border border-gray-300 hover:border-[#FF5858] ease-out transition-all duration-300 rounded-lg px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-[#FF5858]"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-[#FF5858] text-white px-10 py-3 rounded-lg mt-5 hover:bg-red-500 ease-out transition-all duration-300 hover:scale-105"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  </section>
   </div>
 </template>
