@@ -36,45 +36,137 @@ const menusFiltrados = [
         </button>
       </div>
 
-      <img src="/logonay.png" alt="Logo CBPF" class="mx-auto w-40 mb-10 bg-white border-2 border-red-900 rounded-full p-2" />
+      <img src="/logonay.png" alt="Logo CBPF" class="mx-auto w-40 bg-white border-2 border-red-900 rounded-full p-2" />
 
-      <ul class="space-y-16 pl-3 pt-10 flex-1">
-        <li
-          v-for="menu in menusFiltrados"
-          :key="menu.label"
-          class="group flex font-bold items-center gap-2 cursor-pointer hover:scale-105 transition-all"
-        >
-          <Icon :icon="menu.icon" class="text-2xl" />
-          <NuxtLink
-            :to="menu.link"
-            class="text-3xl text-white group-hover:font-bold"
-            @click="menuOpen = false"
+      <ul class="space-y-7 pl-3 pt-10 flex-1">
+  <li
+    v-for="menu in menusFiltrados"
+    :key="menu.label"
+    :class="[
+      'group flex font-bold items-center gap-2 cursor-pointer hover:scale-105 transition-all p-3 rounded-2xl',
+      menu.label === 'Início'
+        ? 'bg-white'
+        : 'text-white'
+    ]"
+  >
+    <Icon
+      :icon="menu.icon"
+      :class="[
+        'text-2xl',
+        menu.label === 'Início'
+          ? 'text-[#ee534e]'
+          : 'text-white'
+      ]"
+    />
+
+    <NuxtLink
+      :to="menu.link"
+      :class="[
+        'md:text-3xl text-xl font-bold',
+        menu.label === 'Início'
+          ? 'text-[#4b4b4b]'
+          : 'text-white'
+      ]"
+      @click="menuOpen = false"
+    >
+      {{ menu.label }}
+    </NuxtLink>
+  </li>
+</ul>
+      <div class="flex justify-center items-center">
+        <p class="text-lg text-center text-white font-semibold p-3 pt-5 italic">
+          "O inglês pode mudar sua vida".
+        </p>
+        </div>
+        <div class="flex justify-center text-center">
+          <button
+            class="bg-white text-[#FF5858] font-bold px-3 py-3 rounded-lg mt-5
+                  ease-out transition-all duration-300
+                  hover:scale-105 w-full flex items-center justify-center gap-2"
           >
-            {{ menu.label }}
-          </NuxtLink>
-        </li>
-      </ul>
+            <span>Matrículas abertas!</span>
+
+            <Icon
+              icon="mdi:school"
+              class="text-2xl text-[#FF5858]"
+            />
+          </button>
+      </div>
+      <div class="flex justify-center items-center gap-2 pt-5">
+        <NuxtLink target="_blank" to="https://www.instagram.com/teacher_nah?igsh=MXU5bHNkbGFpN3B2Mg==">
+      <Icon icon="mdi:instagram" class="text-white text-3xl hover:text-gray-300 ease-out transition-all duration-300 hover:scale-110" />
+    </NuxtLink>
+    <NuxtLink target="_blank" to="https://wa.me/5521975602163">
+      <Icon icon="mdi:whatsapp" class="text-white text-3xl hover:text-gray-300 ease-out transition-all duration-300 hover:scale-110" />
+    </NuxtLink>
+      </div>
     </div>
   </Transition>
 
   <nav class="hidden lg:flex">
     <div class="fixed inset-y-0 left-0 w-64 bg-gradient-to-b from-[#ee534e] via-[#db2929] to-[#942b2b] border-r-2 border-gray-300 text-white p-5">
       <img src="/logonay.png" alt="Logo CBPF" class="mx-auto w-52 mb-5 bg-white border-2 border-red-900 rounded-full p-2" />
-      <ul class="space-y-20 pl-3 pt-16 font-bold">
-        <li
-          v-for="menu in menusFiltrados"
-          :key="menu.label"
-          class="group flex font-bold items-center gap-2 cursor-pointer hover:scale-105 transition-all"
-        >
-          <Icon :icon="menu.icon" class="text-3xl" />
-          <NuxtLink
-            :to="menu.link"
-            class="text-3xl text-white group-hover:font-bold"
+      <ul class="space-y-14 pl-3 pt-5 font-bold">
+  <li
+    v-for="menu in menusFiltrados"
+    :key="menu.label"
+    :class="[
+      'group flex items-center gap-3 cursor-pointer hover:scale-105 transition-all p-4 rounded-2xl',
+      menu.label === 'Início'
+        ? 'bg-white'
+        : 'text-white'
+    ]"
+  >
+    <Icon
+      :icon="menu.icon"
+      :class="[
+        'text-3xl',
+        menu.label === 'Início'
+          ? 'text-[#ee534e]'
+          : 'text-white'
+      ]"
+    />
+
+    <NuxtLink
+      :to="menu.link"
+      :class="[
+        'text-2xl font-bold',
+        menu.label === 'Início'
+          ? 'text-[#4b4b4b]'
+          : 'text-white'
+      ]"
+    >
+      {{ menu.label }}
+    </NuxtLink>
+  </li>
+</ul>
+      <div class="flex justify-center items-center">
+        <p class="text-lg text-center mt-10 text-white italic p-3 pt-10">
+          "O inglês pode mudar sua vida".
+        </p>
+      </div>
+      <div class="flex justify-center text-center">
+          <button
+            class="bg-white text-[#FF5858] font-bold px-3 py-3 rounded-lg mt-5
+                  ease-out transition-all duration-300
+                  hover:scale-105 w-full flex items-center justify-center gap-2"
           >
-            {{ menu.label }}
-          </NuxtLink>
-        </li>
-      </ul>
+            <span>Matrículas abertas!</span>
+
+            <Icon
+              icon="mdi:school"
+              class="text-2xl text-[#FF5858]"
+            />
+          </button>
+      </div>
+      <div class="flex justify-center items-center gap-2 pt-5">
+        <NuxtLink target="_blank" to="https://www.instagram.com/teacher_nah?igsh=MXU5bHNkbGFpN3B2Mg==">
+      <Icon icon="mdi:instagram" class="text-white text-3xl hover:text-gray-300 ease-out transition-all duration-300 hover:scale-110" />
+    </NuxtLink>
+    <NuxtLink target="_blank" to="https://wa.me/5521975602163">
+      <Icon icon="mdi:whatsapp" class="text-white text-3xl hover:text-gray-300 ease-out transition-all duration-300 hover:scale-110" />
+    </NuxtLink>
+      </div>
     </div>
   </nav>
 </template>
